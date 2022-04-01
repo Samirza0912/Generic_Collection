@@ -1,4 +1,5 @@
 ﻿using System;
+using Generic_Collection.Models;
 
 namespace Generic_Collection
 {
@@ -44,6 +45,42 @@ e) İkinci bir Group obyketi yaradın və qrup nömrəsinin avtomatik artmağın
          */
         static void Main(string[] args)
         {
+            
+            Console.WriteLine("Please write the student's name: ");
+            string name = Console.ReadLine();
+            Console.WriteLine("Please write the student's surname: ");
+            string surname = Console.ReadLine();
+            Console.WriteLine("Please write the student's age: ");
+            int age = int.Parse(Console.ReadLine());
+            Console.WriteLine("Please write the student's point: ");
+            int point = int.Parse(Console.ReadLine());
+
+            Student student = new Student(name,surname,age,point);
+            student.Name = name;
+            student.Surname = surname;
+            student.Age = age;
+            student.Point = point;
+
+            student.ShowInfo();
+
+            Student student1 = new Student("Bukayo", "Saka", 20, 81);
+            Student student2 = new Student("Emil", "Smith-Rowe", 21, 77);
+            Student student3 = new Student("Martin", "Odegaard", 22, 83);
+            Student student4 = new Student("Gabriel", "Martinelli", 20, 76);
+
+
+            Group group = new Group();
+            group.AddStudent(student1);
+            group.AddStudent(student2);
+            group.AddStudent(student3);
+            group.AddStudent(student4);
+
+            Console.WriteLine(student3 > student4);
+
+            group.GetAllStudents();
+
+            Console.WriteLine(group);
+
             
         }
     }
