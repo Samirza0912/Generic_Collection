@@ -79,6 +79,8 @@ e) İkinci bir Group obyketi yaradın və qrup nömrəsinin avtomatik artmağın
 
             group.GetAllStudents();
 
+            Group.Sort();
+
             Console.WriteLine(group);
 
             

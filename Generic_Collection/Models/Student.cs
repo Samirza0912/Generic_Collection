@@ -5,7 +5,7 @@ namespace Generic_Collection.Models
     {
         private static int _id;
 
-        public int id { get; }
+        public int Id { get; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public int Age { get; set; }
@@ -18,7 +18,7 @@ namespace Generic_Collection.Models
             Age = age;
             Point = point;
             _id++;
-            id = _id;
+            Id = _id;
         }
 
         public Student()
@@ -36,7 +36,7 @@ namespace Generic_Collection.Models
 
         public void ShowInfo()
         {
-            Console.WriteLine($"Name: {Name} Surname: {Surname} Age: {Age} Point: {Point} ID: {id}");
+            Console.WriteLine($"Name: {Name} Surname: {Surname} Age: {Age} Point: {Point} ID: {Id}");
         }
     }
 }

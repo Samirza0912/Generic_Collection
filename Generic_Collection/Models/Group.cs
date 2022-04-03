@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Generic_Collection.Models
@@ -10,8 +11,9 @@ namespace Generic_Collection.Models
 
         public Group(int no)
         {
+            string a = "AP101";
+
             No = no;
-            No = 101;
             No++;
         }
 
@@ -30,8 +32,27 @@ namespace Generic_Collection.Models
         {
             foreach (Student student in students)
             {
-                Console.WriteLine($"{student.id}; {student.Name}; { student.Surname}; { student.Age}; { student.Point}");
+                Console.WriteLine($"{student.Id}; {student.Name}; { student.Surname}; { student.Age}; { student.Point}");
             }
+        }
+        public static void Sort()
+        {
+            Student student = new Student();
+            Student[] student1 = { };
+            
+            for (int i = 0; i < student1.Length - 1; i++)
+            {
+                for (int j = i + 1; j < student1.Length; j++)
+                {
+                    if (student1[i] > student1[j])
+                    {
+                        student = student1[i];
+                        student1[i] = student1[j];
+                        student1[j] = student;
+                    }
+                }
+            }
+            Console.WriteLine(student);
         }
 
 
